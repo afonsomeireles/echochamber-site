@@ -10,14 +10,15 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100vh; /* switch width and height */
+  height: 100vw;
   background-image: url('images/background-texture.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1a1a1a;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: top left;
   opacity: 0.75;
   z-index: -1;
 }
