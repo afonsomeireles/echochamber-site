@@ -9,9 +9,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
+  background-image: url('images/background-texture.png');
+  background-size: cover;           /* Scales image to cover full background */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;     /* Optional: makes background stay during scroll */
   color: #f5f5f5;
   font-family: 'Oswald', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .container {
