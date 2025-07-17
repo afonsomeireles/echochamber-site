@@ -29,7 +29,7 @@ body {
   color: #FFFEF0;
   font-family: 'Oswald', sans-serif;
   line-height: 1.6;
-  position: relative; /* needed for layering */
+  position: relative;
   z-index: 1;
 }
 
