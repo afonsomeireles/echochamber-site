@@ -104,6 +104,7 @@ header {
 .setlist li {
   margin: 0.25rem 0;
   line-height: 1.2;
-  font-weight: 400;
-  text-transform: capitalize; /* Optional: for a more uniform look */
+  font-weight: 200; /* or try 200 if Oswald supports it */
+  text-transform: none;
 }
+
