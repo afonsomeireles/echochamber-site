@@ -21,10 +21,10 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh; /* Flip dimensions */
+  width: 100vh;
   height: 100vw;
   background-image: url('images/background-texture.jpg');
-  background-size: 100% 100%; /* Stretches to fill fully */
+  background-size: cover; /* This preserves aspect ratio and fills screen */
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1a1a1a;
