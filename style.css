@@ -33,10 +33,19 @@ header {
 }
 
 .logo {
-  max-width: 400px;
+  max-width: 300px;
+  width: 90%;
   height: auto;
+  margin: 1.5rem auto 1rem auto;
   display: block;
-  margin: 0 auto 0.5rem auto; /* no top margin */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 220px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* Social Icons */
