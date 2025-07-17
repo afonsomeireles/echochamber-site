@@ -153,7 +153,7 @@ header {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -181,6 +181,6 @@ header {
 .navbar a.active {
   color: #FFFEF0; /* Highlight color for active page */
   font-weight: bold;
-  border-bottom: 2px solid #FF6B6B;
+  border-bottom: 2px solid #FFFEF0;
 }
 
