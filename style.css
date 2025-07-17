@@ -184,3 +184,21 @@ header {
   border-bottom: 2px solid #FFFEF0;
 }
 
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  background-color: #FFFEF0; /* off-white background */
+  color: #1a1a1a;            /* dark text for contrast */
+}
+
+.footer a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #FF6B00; /* or any accent you’ve been using */
+}
+
