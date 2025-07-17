@@ -91,11 +91,14 @@
       const card = document.createElement("div");
       card.className = "gig-card";
 
+      const [year, month, day] = gig.date.split("-");
+      const displayDate = `${month}/${day}/${year}`;
+
       card.innerHTML = `
         <img src="${gig.flyer}" alt="Flyer for ${gig.venue}" />
         <div class="gig-info">
           <p><strong>${gig.venue}</strong></p>
-          <p>${new Date(gig.date).toLocaleDateString()}</p>
+          <p>${displayDate}</p>
         </div>
       `;
 
