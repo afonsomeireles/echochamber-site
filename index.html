@@ -9,6 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
+    nonce="yourNonceValue"></script>
+  
   <div class="container">
     <!-- Logo -->
     <header>
@@ -42,6 +47,16 @@
         <img src="images/image1.jpeg" alt="Band 1" />
         <img src="images/image2.jpg" alt="Band 2" />
         <img src="images/image3.jpg" alt="Band 3" />
+      </div>
+    </section>
+
+    <section class="fb-embed">
+      <h2>Watch Us Live</h2>
+      <div class="fb-video" 
+           data-href="https://www.facebook.com/echochambervb/videos/993242725908358"
+           data-width="500"
+           data-show-text="false"
+           data-allowfullscreen="true">
       </div>
     </section>
 
