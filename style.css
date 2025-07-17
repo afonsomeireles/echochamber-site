@@ -27,9 +27,9 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1a1a1a;
-  transform: rotate(-90deg) scale(1.2);
+  transform: rotate(-90deg) translateX(-100%);
   transform-origin: center;
-  opacity: 0.25;
+  opacity: 0.5;
   z-index: -1;
 }
 
