@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo Chamber | Gigs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <header>
+      <img src="images/cropped-logo-cream.png" alt="Echo Chamber Logo" class="logo" />
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gigs.html" class="active">Gigs</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Socials -->
+    <section class="socials">
+      <a href="https://facebook.com/echochambervb" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com/echochambervb" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:echochambervb@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </section>
+
+    <!-- Upcoming Gigs -->
+    <section class="gigs">
+      <h2>Upcoming Gigs</h2>
+      <div class="scroll-container" id="upcoming-gigs">
+        <!-- Flyers auto-populated by JS -->
+      </div>
+    </section>
+
+    <!-- Past Gigs -->
+    <section class="gigs">
+      <h2>Past Gigs</h2>
+      <div class="scroll-container" id="past-gigs">
+        <!-- Flyers auto-populated by JS -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const gigs = [
+      {
+        date: "2025-08-09",
+        venue: "Woody's Great Bridge",
+        flyer: "flyers/bigwoodys_20250809.jpg"
+      },
+      {
+        date: "2024-10-25",
+        venue: "South Beach Grill",
+        flyer: "flyers/southbeach_20241025.jpg"
+      },
+      {
+        date: "2024-09-29",
+        venue: "Kars4Kids",
+        flyer: "flyers/kars4kids_20240929.jpg"
+      }
+    ];
+
+    const today = new Date().setHours(0, 0, 0, 0);
+
+    gigs.forEach(gig => {
+      const gigDate = new Date(gig.date).setHours(0, 0, 0, 0);
+      const container = gigDate >= today
+        ? document.getElementById("upcoming-gigs")
+        : document.getElementById("past-gigs");
+
+      const card = document.createElement("div");
+      card.className = "gig-card";
+
+      card.innerHTML = `
+        <img src="${gig.flyer}" alt="Flyer for ${gig.venue}" />
+        <div class="gig-info">
+          <p><strong>${gig.venue}</strong></p>
+          <p>${new Date(gig.date).toLocaleDateString()}</p>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
