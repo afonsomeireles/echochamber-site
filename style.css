@@ -150,9 +150,11 @@ header {
 
 /* Navigation Bar */
 .navbar {
-  background-color: transparent;
-  padding: 1rem 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .navbar ul {
@@ -166,7 +168,7 @@ header {
 }
 
 .navbar a {
-  color: #FFF6BF;
+  color: #FFFEF0;
   text-decoration: none;
   transition: color 0.3s;
   letter-spacing: 0.05em;
@@ -177,7 +179,7 @@ header {
 }
 
 .navbar a.active {
-  color: #FF6B6B; /* Highlight color for active page */
+  color: #FFFEF0; /* Highlight color for active page */
   font-weight: bold;
   border-bottom: 2px solid #FF6B6B;
 }
