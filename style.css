@@ -1,51 +1,65 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
   color: #f5f5f5;
   font-family: 'Oswald', sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .container {
   text-align: center;
-  padding: 0rem 1rem; /* remove vertical padding */
+  padding: 0 1rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* Logo */
 header {
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
   max-width: 400px;
   height: auto;
-  margin: 0.5rem auto 0rem auto; /* fine-tuned spacing */
   display: block;
+  margin: 0 auto 0.5rem auto; /* no top margin */
 }
 
+/* Social Icons */
 .socials {
-  margin: 0rem 0;
+  margin: 0.5rem 0 1.5rem 0; /* reduced spacing */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .socials a {
-  margin: 0 0.5rem;
   color: #f5f5f5;
   font-size: 1.8rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .socials a:hover {
   color: #ffcc00;
 }
 
+/* Band Description */
 .description {
   margin: 2rem 0;
   font-size: 1.1rem;
 }
 
+/* Gallery */
 .gallery {
   margin: 2rem 0;
   overflow: hidden;
@@ -58,27 +72,28 @@ header {
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;        /* Firefox */
+  scrollbar-width: none;
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none;                /* Chrome/Safari */
+  display: none;
 }
 
 .scroll-container img {
-  height: 400px;                /* about 2x your current 200px */
+  height: 400px;
   border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
+/* Song List */
 .setlist {
   margin: 3rem 0;
 }
 
 .setlist h2 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .setlist ul {
@@ -87,6 +102,8 @@ header {
 }
 
 .setlist li {
-  margin: 0.5rem 0;
-  font-weight: 300;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: capitalize; /* Optional: for a more uniform look */
 }
