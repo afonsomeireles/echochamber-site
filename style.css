@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  margin: 1rem 0;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  color: #f5f5f5;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #ffcc00;
+}
+
+.description {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+.gallery {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.scroll-container img {
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.setlist {
+  margin: 3rem 0;
+}
+
+.setlist h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.setlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.setlist li {
+  margin: 0.5rem 0;
+  font-weight: 300;
+}
