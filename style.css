@@ -147,3 +147,38 @@ header {
   margin-bottom: 1rem;
   color: #FFFEF0;
 }
+
+/* Navigation Bar */
+.navbar {
+  background-color: transparent;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-flex;
+  gap: 2rem;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  font-size: 1.2rem;
+}
+
+.navbar a {
+  color: #FFF6BF;
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.navbar a:hover {
+  color: #FFCC00;
+}
+
+.navbar a.active {
+  color: #FF6B6B; /* Highlight color for active page */
+  font-weight: bold;
+  border-bottom: 2px solid #FF6B6B;
+}
+
