@@ -72,6 +72,13 @@ body::before {
   margin-bottom: 0.5rem;
 }
 
+.member-card .role {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #FFFEF0;
+  margin-bottom: 0.5rem;
+}
+
 .container {
   text-align: center;
   padding: 0 1rem;
