@@ -259,6 +259,12 @@ header {
   color: #FFCC00; /* or any accent you’ve been using */
 }
 
+.gig-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
 .gig-card img {
   height: 300px;
   width: auto;
