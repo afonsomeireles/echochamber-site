@@ -263,7 +263,7 @@ header {
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   transition: transform 0.2s ease-in-out;
 }
 
