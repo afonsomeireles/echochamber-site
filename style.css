@@ -48,9 +48,9 @@ body::before {
 
 .member-card {
   background-color: rgba(255, 255, 240, 0.05);
-  border: 1px solid #FFFEF0;
+  border: 0px solid #FFFEF0;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   width: 100%;
   max-width: 400px;
   min-height: 500px; /* ensures equal height */
