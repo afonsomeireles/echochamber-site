@@ -259,7 +259,7 @@ header {
   color: #FFCC00; /* or any accent you’ve been using */
 }
 
-..gig-card img {
+.gig-card img {
   width: 100%;
   max-width: 300px;
   height: auto;
