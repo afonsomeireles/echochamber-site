@@ -57,6 +57,7 @@
   </div>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
     const gigs = [
       {
         date: "2025-08-09",
@@ -115,7 +116,7 @@
     document.querySelector(".popup .close").addEventListener("click", () => {
       document.getElementById("popup").classList.add("hidden");
     });
-
+  });
   </script>
   <div style="height: 3rem;"></div>
   <footer class="footer">
