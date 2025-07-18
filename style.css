@@ -47,7 +47,7 @@ body::before {
 }
 
 .member-card {
-  background-color: rgba(255, 255, 240, 0.1);
+  background-color: rgba(255, 255, 240, 0.05);
   border: 1px solid #FFFEF0;
   padding: 1rem;
   border-radius: 0.5rem;
