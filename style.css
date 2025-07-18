@@ -72,9 +72,10 @@ body::before {
   margin-bottom: 0.5rem;
 }
 
-.member-card .role {
+.member-card .bio {
   font-weight: 300;
   font-size: 1rem;
+  line-height: 1;
   color: #FFFEF0;
   margin-bottom: 0.5rem;
 }
