@@ -260,10 +260,10 @@ header {
 }
 
 .gig-card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  height: 300px; /* or whatever consistent height you want */
+  width: auto;
   border-radius: 0rem;
+  object-fit: contain;
   transition: transform 0.2s ease-in-out;
 }
 
