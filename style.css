@@ -259,11 +259,12 @@ header {
   color: #FFCC00; /* or any accent you’ve been using */
 }
 
-.gig-card img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: block;
+..gig-card img {
   width: 100%;
-  border-radius: 0.25rem;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
 }
 
 .gig-card img:hover {
