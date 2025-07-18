@@ -95,7 +95,9 @@
       const displayDate = `${month}/${day}/${year}`;
 
       card.innerHTML = `
-        <img src="${gig.flyer}" alt="Flyer for ${gig.venue}" />
+        <div class="gig-image-wrapper">
+          <img src="${gig.flyer}" alt="Flyer for ${gig.venue}" />
+        </div>
         <div class="gig-info">
           <p><strong>${gig.venue}</strong></p>
           <p>${displayDate}</p>
@@ -103,7 +105,17 @@
       `;
 
       container.appendChild(card);
+      card.querySelector(".gig-image-wrapper img").addEventListener("click", () => {
+        const popup = document.getElementById("popup");
+        const popupImg = document.getElementById("popup-img");
+        popupImg.src = gig.flyer;
+        popup.classList.remove("hidden");
+      });
     });
+    document.querySelector(".popup .close").addEventListener("click", () => {
+      document.getElementById("popup").classList.add("hidden");
+    });
+
   </script>
   <div style="height: 3rem;"></div>
   <footer class="footer">
@@ -119,5 +131,9 @@
       </p>
     </div>
   </footer>
+  <div id="popup" class="popup hidden">
+    <span class="close">&times;</span>
+    <img id="popup-img" src="" alt="Popup Flyer">
+  </div>
 </body>
 </html>
