@@ -57,7 +57,7 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const gigs = [
       {
         date: "2025-08-09",
@@ -106,6 +106,8 @@
       `;
 
       container.appendChild(card);
+
+      // Image click -> open popup
       card.querySelector(".gig-image-wrapper img").addEventListener("click", () => {
         const popup = document.getElementById("popup");
         const popupImg = document.getElementById("popup-img");
@@ -113,11 +115,14 @@
         popup.classList.remove("hidden");
       });
     });
+
+    // ✅ Place this outside of the loop
     document.querySelector(".popup .close").addEventListener("click", () => {
       document.getElementById("popup").classList.add("hidden");
     });
   });
-  </script>
+</script>
+
   <div style="height: 3rem;"></div>
   <footer class="footer">
     <div class="footer-content">
