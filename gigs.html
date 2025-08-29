@@ -62,53 +62,47 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const gigs = [
-        {
-          date: "2025-12-20",
-          venue: "Woody's Great Bridge",
-          flyer: "flyers/bigwoodys_20251220.png"
-        },
-        {
-          date: "2025-10-03",
-          venue: "Woody's Great Bridge",
-          flyer: "flyers/bigwoodys_20251003.png"
-        },
-        {
-          date: "2025-08-22",
-          venue: "Poppa's Pub",
-          flyer: "flyers/poppas_20250822.jpg"
-        },
-        {
-          date: "2025-08-09",
-          venue: "Woody's Great Bridge",
-          flyer: "flyers/bigwoodys_20250809.png"
-        },
-        {
-          date: "2024-10-25",
-          venue: "South Beach Grill",
-          flyer: "flyers/southbeach_20241025.png"
-        },
-        {
-          date: "2024-09-29",
-          venue: "Kars4Kids",
-          flyer: "flyers/kars4kids_20240929.png"
-        },
-        {
-          date: "2024-06-20",
-          venue: "South Beach Grill",
-          flyer: "flyers/southbeach_20240620.png"
-        }
-      ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const gigs = [
+      { date: "2025-12-20", venue: "Woody's Great Bridge", flyer: "flyers/bigwoodys_20251220.png" },
+      { date: "2025-10-03", venue: "Woody's Great Bridge", flyer: "flyers/bigwoodys_20251003.png" },
+      { date: "2025-08-22", venue: "Poppa's Pub",           flyer: "flyers/poppas_20250822.jpg" },
+      { date: "2025-08-09", venue: "Woody's Great Bridge", flyer: "flyers/bigwoodys_20250809.png" },
+      { date: "2024-10-25", venue: "South Beach Grill",    flyer: "flyers/southbeach_20241025.png" },
+      { date: "2024-09-29", venue: "Kars4Kids",            flyer: "flyers/kars4kids_20240929.png" },
+      { date: "2024-06-20", venue: "South Beach Grill",    flyer: "flyers/southbeach_20240620.png" }
+    ];
 
-      const today = new Date().setHours(0, 0, 0, 0);
+    // Normalize "today" to midnight
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-      gigs.forEach(gig => {
-        const gigDate = new Date(gig.date).setHours(0, 0, 0, 0);
-        const container = gigDate >= today
-          ? document.getElementById("upcoming-gigs")
-          : document.getElementById("past-gigs");
+    // Split + sort (upcoming = soonest -> latest, past = most recent -> oldest)
+    const upcoming = gigs
+      .filter(g => new Date(g.date) >= today)
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
 
+    const past = gigs
+      .filter(g => new Date(g.date) < today)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    renderGigList(upcoming, "upcoming-gigs");
+    renderGigList(past, "past-gigs");
+
+    // Popup wiring (once)
+    document.querySelector(".popup .close").addEventListener("click", () => {
+      document.getElementById("popup").classList.add("hidden");
+    });
+    document.getElementById("popup").addEventListener("click", (event) => {
+      const popupImg = document.getElementById("popup-img");
+      if (!popupImg.contains(event.target)) {
+        document.getElementById("popup").classList.add("hidden");
+      }
+    });
+
+    function renderGigList(list, containerId) {
+      const container = document.getElementById(containerId);
+      list.forEach(gig => {
         const card = document.createElement("div");
         card.className = "gig-card";
 
@@ -124,7 +118,6 @@
             <p>${displayDate}</p>
           </div>
         `;
-
         container.appendChild(card);
 
         // Image click -> open popup
@@ -135,21 +128,9 @@
           popup.classList.remove("hidden");
         });
       });
-
-      // Close popup on X button
-      document.querySelector(".popup .close").addEventListener("click", () => {
-        document.getElementById("popup").classList.add("hidden");
-      });
-
-      // Close popup if clicking outside the image
-      document.getElementById("popup").addEventListener("click", (event) => {
-        const popupImg = document.getElementById("popup-img");
-        if (!popupImg.contains(event.target)) {
-          document.getElementById("popup").classList.add("hidden");
-        }
-      });
-    });
-  </script>
+    }
+  });
+</script>
 
   <div style="height: 3rem;"></div>
   <footer class="footer">
